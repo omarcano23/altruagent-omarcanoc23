@@ -48,12 +48,4 @@ module-level `choose_message` function in this file is ignored). See
 examples/messaging_agent.py.
 """
 
-from altruagent import DecisionContext, GameState, LegalAction
-
-
-def choose_action(state: GameState, context: DecisionContext) -> LegalAction:
-    return state.legal_actions[0]
-
-
-def create_agent():
-    return choose_action
+from examples.smoke_agent import create_agent
